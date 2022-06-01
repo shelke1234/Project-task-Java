@@ -11,7 +11,13 @@ pipeline {
         NEXUS_CREDENTIAL_ID = "nexuslogin"
         ARTVERSION = "${env.BUILD_ID}"
     }
+	}
 	
+    stages{
+	    stage('fetch code') {
+		    steps {
+			    git url: 'https://github.com/shelke1234/Project-task-Java.git'
+    }
     stages{
         
         stage('BUILD'){
