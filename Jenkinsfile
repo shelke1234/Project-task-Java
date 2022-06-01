@@ -9,10 +9,10 @@ pipeline {
     environment {
         NEXUS_VERSION = "nexus3"
         NEXUS_PROTOCOL = "http"
-        NEXUS_URL = "172.31.40.209:8081"
-        NEXUS_REPOSITORY = "vprofile-release"
-	NEXUS_REPOGRP_ID    = "vprofile-grp-repo"
-        NEXUS_CREDENTIAL_ID = "nexuslogin"
+        NEXUS_URL = "43.204.25.147:8081"
+        NEXUS_REPOSITORY = "Applogin-release"
+	NEXUS_REPOGRP_ID    = "applogin-group"
+        NEXUS_CREDENTIAL_ID = "admin"
         ARTVERSION = "${env.BUILD_ID}"
     }
 	
