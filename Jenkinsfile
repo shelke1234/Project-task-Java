@@ -16,7 +16,7 @@ pipeline {
         
         stage('BUILD'){
             steps {
-                sh 'mvn clean install'
+                sh 'mvn clean install -DskipTests'
             }
     
         }
@@ -41,7 +41,7 @@ pipeline {
           }
 
           steps {
-            withSonarQubeEnv('sonar-pro') {
+            withSonarQubeEnv('Sonar') {
                sh '''${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=vprofile \
                    -Dsonar.projectName=vprofile-repo \
                    -Dsonar.projectVersion=1.0 \
