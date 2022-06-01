@@ -9,7 +9,7 @@ pipeline {
     environment {
         NEXUS_VERSION = "nexus3"
         NEXUS_PROTOCOL = "http"
-        NEXUS_URL = "43.204.25.147:8081"
+        NEXUS_URL = "http://43.204.25.147:8081/"
         NEXUS_REPOSITORY = "Applogin-release"
 	NEXUS_REPOGRP_ID    = "applogin-group"
         NEXUS_CREDENTIAL_ID = "admin"
