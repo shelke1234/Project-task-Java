@@ -1,18 +1,14 @@
 pipeline {
     
 	agent any
-/*	
-	tools {
-        maven "maven3"
-    }
-*/	
+	
     environment {
         NEXUS_VERSION = "nexus3"
         NEXUS_PROTOCOL = "http"
-        NEXUS_URL = "http://43.204.25.147:8081/"
+        NEXUS_URL = "10.10.1.4:8081"
         NEXUS_REPOSITORY = "Applogin-release"
 	NEXUS_REPOGRP_ID    = "applogin-group"
-        NEXUS_CREDENTIAL_ID = "admin"
+        NEXUS_CREDENTIAL_ID = "nexuslogin"
         ARTVERSION = "${env.BUILD_ID}"
     }
 	
@@ -56,7 +52,7 @@ pipeline {
         stage('CODE ANALYSIS with SONARQUBE') {
           
 		  environment {
-             scannerHome = tool 'sonarscanner4'
+             scannerHome = tool 'sonarqube 4.7'
           }
 
           steps {
